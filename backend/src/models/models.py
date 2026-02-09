@@ -9,7 +9,7 @@ class Task(SQLModel, table=True):
     user_id: int 
     title: str
     description: Optional[str] = None
-    is_completed: bool = Field(default=False)
+    completed: bool = Field(default=False)
     created_at: datetime = Field(default_factory=datetime.utcnow)
 
 class Conversation(SQLModel, table=True):
